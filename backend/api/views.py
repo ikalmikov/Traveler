@@ -54,15 +54,14 @@ def signup_view(request):
     
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['POST'])
+@api_view(['GET'])
 # @login_required()
 def logout_view(request):
     if not request.user.is_authenticated:
         return Response({'detail':'User is not logged in.'}, status=status.HTTP_400_BAD_REQUEST)
 
     logout(request)
-    response = Response({"detail": "Logged out successfully."}, status=status.HTTP_200_OK)
-    return response
+    return Response({"detail": "Logged out successfully."})
 
 # @api_view(['GET'])
 # @ensure_csrf_cookie

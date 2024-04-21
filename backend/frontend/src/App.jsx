@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 import Itinerary from "./pages/Itinerary";
+import ItineraryList from "./pages/ItineraryList";
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
